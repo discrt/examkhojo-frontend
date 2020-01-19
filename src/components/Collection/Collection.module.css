@@ -1,0 +1,67 @@
+.landingPage {
+	background: url("/images/examkhojo-dark-bg.png");
+	background-size: cover;
+	height: 60vh;
+	position: relative;
+}
+
+.centralInput {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+
+.header {
+	font-family: Mark-Bold;
+	color: #ffffff;
+	margin-bottom: 30px;
+	font-size: 2.5rem;
+	margin-left: 40px;
+}
+
+.inputBar {
+	background: #ffffff;
+	padding: 10px 20px;
+	padding-right: 10px;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 40px;
+}
+
+.inputBar i {
+	color: #52535c;
+	font-size: 1.5rem;
+	padding: 20px 10px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.inputBar input {
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.inputBar input:focus {
+	outline: 0;
+}
+
+.inputBar input::placeholder {
+	color: #52535c;
+}
+
+.loadButton {
+	background: none;
+	border: 1px solid #52535c;
+	color: #52535c;
+	padding: 10px 20px;
+	font-size: 1rem;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
