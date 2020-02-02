@@ -5,6 +5,7 @@ import CollegeScreen from "../screens/CollegeScreen";
 import ExamScreen from "../screens/ExamScreen";
 import CourseScreen from "../screens/CourseScreen";
 import DashboardScreen from "../screens/DashboardScreen.js";
+import AdminScreen from "../screens/AdminScreen";
 
 const App = () => {
 	return (
@@ -14,6 +15,7 @@ const App = () => {
 			<Route path="/colleges" exact component={CollegeScreen} />
 			<Route path="/exams" exact component={ExamScreen} />
 			<Route path="/courses" exact component={CourseScreen} />
+			<Route path="/admin" exact component={AdminScreen} />
 		</BrowserRouter>
 	);
 };
