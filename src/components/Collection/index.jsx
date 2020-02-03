@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Navbar from "../Navbar";
-import Footer from "../../components/Footer";
+import Footer from "../Footer";
 import collectionStyle from "./Collection.module.css";
 
 const Collection = ({ header, placeholder, children }) => {

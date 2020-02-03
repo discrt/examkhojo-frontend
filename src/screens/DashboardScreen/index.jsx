@@ -15,7 +15,7 @@ const DashboardScreen = () => {
 					<div>
 						<h2>Amit Trivedi</h2>
 						<div className={dashboardStyle.editSection}>
-							<i class="far fa-edit"></i>
+							<i className="far fa-edit"></i>
 							<p>Edit</p>
 						</div>
 					</div>

@@ -71,14 +71,14 @@ const Footer = () => {
 					</div>
 					<div className={footerStyle.iconGroup}>
 						<div>
-							<i class="fab fa-youtube"></i>
-							<i class="fab fa-facebook"></i>
-							<i class="fab fa-instagram"></i>
+							<i className="fab fa-youtube"></i>
+							<i className="fab fa-facebook"></i>
+							<i className="fab fa-instagram"></i>
 						</div>
 						<div>
-							<i class="fab fa-snapchat-ghost"></i>
-							<i class="fab fa-twitter"></i>
-							<i class="fab fa-linkedin"></i>
+							<i className="fab fa-snapchat-ghost"></i>
+							<i className="fab fa-twitter"></i>
+							<i className="fab fa-linkedin"></i>
 						</div>
 					</div>
 				</div>

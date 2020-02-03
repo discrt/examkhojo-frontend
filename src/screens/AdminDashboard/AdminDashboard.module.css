@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoPanel {
+  background: #ffffff;
+  min-width: 20%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.infoPanel img {
+  margin-bottom: 20px;
+}
+
+.header {
+  font-size: 1.5rem;
+}
+
+.subheader {
+  font-size: 1.2rem;
+  font-family: Mark-Bold;
+  color: #006bc2;
+}
+
+.managerList {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.managerList li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.managerList i {
+  cursor: pointer;
+}
+
+.managerInfoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.addBtn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 3.5rem;
+  color: #006bc2;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputField {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.inputField:focus {
+  outline: 0;
+}
+
+.submitBtn {
+  background-color: #006bc2;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #006bc2;
+  text-transform: uppercase;
+}
+
+.submitBtn:focus {
+  outline: 0;
+}
+
+.error {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  color: #c64545;
+  align-self: flex-start;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modalBtn {
+  text-transform: uppercase;
+  padding: 10px;
+  border: 2px solid #006bc2;
+  color: #006bc2;
+  font-family: Mark-Bold;
+  background: #fff;
+  cursor: pointer;
+}
+
+.modalBtn:focus {
+  outline: 0;
+}
+
+.logout {
+  position: absolute;
+  background: #006bc2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  top: 20px;
+  right: 50px;
+  color: #fff;
+}
+
+.logout i {
+  margin-right: 10px;
+}

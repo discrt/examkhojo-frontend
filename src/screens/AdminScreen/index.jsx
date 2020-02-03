@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
-
+import React from "react";
+import { connect } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import adminStyle from "./AdminScreen.module.css";
-import { connect } from "react-redux";
 import { adminLogin } from "../../actions";
+import AdminDashboard from "../AdminDashboard";
+import ManagerDashboard from "../ManagerDashboard";
 
 const AdminScreen = ({ adminLogin, admin }) => {
-	useEffect(() => {
-		console.log(admin);
-	}, [admin]);
-
 	const renderInput = ({ field, ...props }) => {
 		return <input {...field} {...props} className={adminStyle.inputField} autoComplete="off" />;
 	};
@@ -19,6 +16,8 @@ const AdminScreen = ({ adminLogin, admin }) => {
 		return <p className={adminStyle.error}>{children}</p>;
 	};
 
+	if (admin && admin.userType === "admin") return <AdminDashboard />;
+	else if (admin && admin.userType === "manager") return <ManagerDashboard />;
 	return (
 		<>
 			<h1 className={adminStyle.header}>Welcome to Examkhojo Admin Panel</h1>
@@ -44,7 +43,6 @@ const AdminScreen = ({ adminLogin, admin }) => {
 				onSubmit={values => {
 					adminLogin(values.username, values.password);
 				}}
-				className={adminStyle.container}
 			>
 				{() => (
 					<div className={adminStyle.container}>
