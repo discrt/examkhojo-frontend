@@ -17,7 +17,7 @@ const AdminDashboard = ({
 
   useEffect(() => {
     getManagers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   const renderInput = ({ field, ...props }) => {
@@ -38,7 +38,7 @@ const AdminDashboard = ({
   const renderManagers = () => {
     if (admin.managerList && admin.managerList.length)
       return admin.managerList.map(cur => (
-        <li key={cur.username}>
+        <li key={cur.id}>
           {renderDeleteAlert(cur)}
           <div className={adminDashboardStyle.managerInfoContainer}>
             <p className={adminDashboardStyle.header}>{cur.name}</p>
@@ -76,7 +76,7 @@ const AdminDashboard = ({
           <button
             className={adminDashboardStyle.modalBtn}
             onClick={() => {
-              deleteManager(manager.username);
+              deleteManager(manager.id);
               setShowAlert(false);
             }}
             style={{ background: "#006bc2", color: "#ffffff" }}

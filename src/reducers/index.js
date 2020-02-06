@@ -17,6 +17,40 @@ const adminReducer = (state = null, action) => {
   }
 };
 
+const examReducer = (state = [], action) => {
+  switch (action.type) {
+    case "EXAMS_LIST":
+      return action.payload;
+    case "EXAMS_ADDED":
+      return [action.payload, ...state];
+    default:
+      return state;
+  }
+};
+const courseReducer = (state = [], action) => {
+  switch (action.type) {
+    case "COURSES_LIST":
+      return action.payload;
+    case "COURSES_ADDED":
+      return [action.payload, ...state];
+    default:
+      return state;
+  }
+};
+const collegeReducer = (state = [], action) => {
+  switch (action.type) {
+    case "COLLEGES_LIST":
+      return action.payload;
+    case "COLLEGES_ADDED":
+      return [action.payload, ...state];
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
-  admin: adminReducer
+  admin: adminReducer,
+  exams: examReducer,
+  courses: courseReducer,
+  colleges: collegeReducer
 });
