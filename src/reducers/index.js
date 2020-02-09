@@ -27,6 +27,7 @@ const examReducer = (state = [], action) => {
       return state;
   }
 };
+
 const courseReducer = (state = [], action) => {
   switch (action.type) {
     case "COURSES_LIST":
@@ -37,6 +38,7 @@ const courseReducer = (state = [], action) => {
       return state;
   }
 };
+
 const collegeReducer = (state = [], action) => {
   switch (action.type) {
     case "COLLEGES_LIST":
@@ -48,9 +50,19 @@ const collegeReducer = (state = [], action) => {
   }
 };
 
+const userReducer = (state = null, action) => {
+  switch (action.type) {
+    case "USER":
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   admin: adminReducer,
   exams: examReducer,
   courses: courseReducer,
-  colleges: collegeReducer
+  colleges: collegeReducer,
+  user: userReducer
 });

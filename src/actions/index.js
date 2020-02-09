@@ -133,3 +133,105 @@ export const editItem = (option, values, id) => {
     }
   };
 };
+
+export const registerUser = values => {
+  return async dispatch => {
+    try {
+      const response = await axiosApi.post("/auth/register", values);
+      localStorage.setItem("authToken", response.data.token);
+      response.data = _.omit(response.data, "token");
+      dispatch({
+        type: "USER",
+        payload: response.data
+      });
+    } catch (err) {
+      console.log("Something went wrong while registering!");
+    }
+  };
+};
+
+export const loginUser = values => {
+  localStorage.removeItem("authToken");
+  return async dispatch => {
+    try {
+      const response = await axiosApi.post("/auth/login", values);
+      localStorage.setItem("authToken", response.data.token);
+      response.data = _.omit(response.data, "token");
+      dispatch({
+        type: "USER",
+        payload: response.data
+      });
+    } catch (err) {
+      console.log("Something went wrong while logging!");
+    }
+  };
+};
+
+export const oauthGoogleLogin = () => {
+  localStorage.removeItem("authToken");
+  return async dispatch => {
+    window.gapi.load("client:auth2", () => {
+      window.gapi.client
+        .init({
+          clientId: process.env.REACT_APP_GOOGLE_ID,
+          scope: "profile"
+        })
+        .then(async () => {
+          try {
+            const auth = window.gapi.auth2.getAuthInstance();
+            await auth.signIn();
+            const user = auth.currentUser.get().getBasicProfile();
+            const response = await axiosApi.post("/auth/google", {
+              name: user.getName(),
+              googleId: user.getId(),
+              profilePicture: user.getImageUrl().split("=")[0],
+              email: user.getEmail()
+            });
+            localStorage.setItem("authToken", response.data.token);
+            response.data = _.omit(response.data, "token");
+            dispatch({
+              type: "USER",
+              payload: response.data
+            });
+          } catch (err) {
+            console.log("Something went wrong while Google Login!");
+          }
+        });
+    });
+  };
+};
+
+export const logoutUser = () => {
+  localStorage.removeItem("authToken");
+  return {
+    type: "USER",
+    payload: false
+  };
+};
+
+export const getUser = () => {
+  if (!localStorage.getItem("authToken"))
+    return {
+      type: "USER",
+      payload: false
+    };
+  else {
+    return async dispatch => {
+      try {
+        const response = await axiosApi.get("/user", {
+          headers: {
+            Authorization: localStorage.getItem("authToken")
+          }
+        });
+        dispatch({
+          type: "USER",
+          payload: {
+            name: response.data
+          }
+        });
+      } catch (err) {
+        console.log("Something went wrong while fetching user!");
+      }
+    };
+  }
+};

@@ -1,44 +1,78 @@
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 .logo {
-	width: 150px;
+  width: 150px;
 }
 
 .links {
-	padding: 0 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .links a,
 .links button {
-	margin: 0 10px;
-	padding: 10px 20px;
-	font-size: 1.2rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
 }
 
 .links a {
-	text-decoration: none;
-	color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .links button {
-	border: none;
-	color: #ffffff;
-	border-radius: 5px;
-	cursor: pointer;
-	background: none;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
 }
 
 .links .login {
-	background: none;
-	border: 2px solid #ffffff;
-	color: #ffffff;
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .links button:focus {
-	outline: 0;
+  outline: 0;
+}
+
+.profileDropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45px;
+  background: #fbfbfd;
+  padding: 20px;
+}
+
+.dropdown p {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dropdown p:last-child {
+  margin: 0;
+}
+
+.dropdown p a {
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
 }
