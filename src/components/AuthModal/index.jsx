@@ -63,6 +63,12 @@ const AuthModal = ({
               return errors;
             }}
             onSubmit={values => {
+              values = {
+                ...values,
+                registrationSlug: window.location.href.split("/").pop()
+                  ? window.location.href.split("/").pop()
+                  : "home"
+              };
               registerUser(values);
             }}
           >
