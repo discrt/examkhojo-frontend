@@ -1,0 +1,76 @@
+.infoContainer {
+	margin: 100px 0;
+}
+
+.headerSection {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 0 40px;
+}
+
+.headerSection h1 {
+	font-family: Mark-Bold;
+	margin-bottom: 10px;
+}
+
+.description {
+	color: #95989f;
+	font-size: 1.2rem;
+}
+
+.inputBar {
+	background: #ffffff;
+	padding: 10px 20px;
+	padding-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.inputBar input {
+	background: none;
+	border: none;
+	width: 100%;
+	font-size: 1.2rem;
+	margin-left: 10px;
+}
+
+.inputBar input:focus {
+	outline: 0;
+}
+
+.inputBar i {
+	color: #95989f;
+}
+
+.cardGroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card {
+	background: #ffffff;
+	padding: 20px;
+	width: 100%;
+	margin: 40px;
+}
+
+.card h2 {
+	margin-bottom: 20px;
+}
+
+.card button {
+	background: none;
+	color: #006bc2;
+	text-decoration: underline;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+	font-size: 1.2rem;
+}
+
+.card button:hover {
+	outline: 0;
+}

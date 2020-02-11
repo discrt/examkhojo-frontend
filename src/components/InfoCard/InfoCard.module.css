@@ -1,0 +1,33 @@
+.container {
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #bec1c7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.details h1 {
+  font-size: 1.3rem;
+}
+
+.details p {
+  color: #9597a5;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.details p:last-child {
+  margin-bottom: 0;
+}
+
+.objectList {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1rem;
+  align-items: center;
+  color: #9597a5;
+}

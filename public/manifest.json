@@ -1,0 +1,8 @@
+{
+  "short_name": "Examkhojo",
+  "name": "Examkhojo Web App",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#006BC2",
+  "background_color": "#ffffff"
+}

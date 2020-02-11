@@ -1,0 +1,52 @@
+.landingPage {
+	background: url("/images/examkhojo-dark-bg.png");
+	background-size: cover;
+	height: 60vh;
+	position: relative;
+}
+
+.userProfile,
+.editSection,
+.bookmarkMenu {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #ffffff;
+}
+
+.userProfile {
+	position: absolute;
+	top: 50%;
+	padding-left: 40px;
+	transform: translateY(-50%);
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.userProfile img {
+	margin-right: 30px;
+}
+
+.userProfile h2 {
+	margin-bottom: 10px;
+}
+
+.bookmarkContainer {
+	background: #fbfbfd;
+	padding: 20px 40px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #52535c;
+	text-align: center;
+}
+
+.bookmarkMenu {
+	color: #52535c;
+}
+
+.bookmarkMenu p {
+	margin: 10px;
+	cursor: pointer;
+}
