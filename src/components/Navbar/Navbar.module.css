@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 0;
 }
 
 .logo {
@@ -10,7 +10,6 @@
 }
 
 .links {
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

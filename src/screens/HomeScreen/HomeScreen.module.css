@@ -1,102 +1,107 @@
 .landingPage {
-	position: relative;
-	height: 60vh;
-	overflow: hidden;
-	background-image: url("/images/examkhojo-dark-bg.png");
-	background-size: cover;
+  height: 60vh;
+  overflow: hidden;
+  background-image: url("/images/examkhojo-dark-bg.png");
+  background-size: cover;
+}
+
+.containerFluid {
+  position: relative;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .centralInput {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .header {
-	font-family: Mark-Bold;
-	color: #ffffff;
-	text-align: center;
-	margin-bottom: 30px;
-	font-size: 2.5rem;
+  font-family: Mark-Bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
 .inputBar {
-	background: #ffffff;
-	padding: 10px 20px;
-	padding-right: 10px;
-	width: 60%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  background: #ffffff;
+  padding: 10px 20px;
+  padding-right: 10px;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .inputBar i {
-	color: #52535c;
-	font-size: 1.5rem;
-	padding: 20px 10px;
-	cursor: pointer;
-	margin-right: 20px;
+  color: #52535c;
+  font-size: 1.5rem;
+  padding: 20px 10px;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .inputBar input {
-	background: none;
-	border: none;
-	font-size: 1.5rem;
-	width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .inputBar input:focus {
-	outline: 0;
+  outline: 0;
 }
 
 .inputBar input::placeholder {
-	color: #52535c;
+  color: #52535c;
 }
 
 .showcase {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	padding: 60px 40px;
-	box-sizing: border-box;
-	background: #ffffff;
-	height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0px;
+  box-sizing: border-box;
+  height: 40vh;
 }
 
 .showcaseHeader {
-	font-size: 3rem;
-	font-family: Mark-Bold;
+  font-size: 3rem;
+  font-family: Mark-Bold;
 }
 
 .showcaseContent {
-	width: 50%;
+  width: 50%;
 }
 
 .showcaseContent h3 {
-	font-family: Mark-Bold;
-	font-size: 1.5rem;
-	margin-bottom: 20px;
+  font-family: Mark-Bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .showcaseContent p {
-	font-size: 1.2rem;
-	color: #52535c;
+  font-size: 1.2rem;
+  color: #52535c;
 }
 
 .showcaseContent button {
-	border: none;
-	background: #006bc2;
-	color: #ffffff;
-	border-radius: 5px;
-	cursor: pointer;
-	padding: 10px;
-	font-size: 1.2rem;
-	margin: 20px 0;
+  border: none;
+  background: #006bc2;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 20px 0;
 }
 
 .showcaseContent button:focus {
-	outline: 0;
+  outline: 0;
 }

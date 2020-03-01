@@ -26,7 +26,9 @@ const Navbar = ({ setShowModal, user, logoutUser, getUser, history }) => {
         />
       </Link>
       <div className={navbarStyle.links}>
-        <Link to="/exams">Exams</Link>
+        <Link to="/exams" style={{ paddingLeft: 0 }}>
+          Exams
+        </Link>
         <Link to="/colleges">Colleges</Link>
         <Link to="/courses">Courses</Link>
         <button>Get Counselling</button>
@@ -36,6 +38,7 @@ const Navbar = ({ setShowModal, user, logoutUser, getUser, history }) => {
           <div style={{ position: "relative" }}>
             <button
               className={navbarStyle.profileDropdown}
+              style={{ paddingRight: 0 }}
               onClick={() => setShowDropdown(!showDropdown)}
             >
               <i className="far fa-user" style={{ marginRight: "10px" }}></i>
