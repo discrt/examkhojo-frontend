@@ -69,9 +69,19 @@
   align-items: flex-start;
 }
 
+.popularLinks div {
+  display: flex;
+  flex-direction: column;
+}
+
 .popularLinks h1,
-.popularLinks p {
+.popularLinks a {
   margin-bottom: 16px;
+}
+
+.popularLinks a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .detailSection div {
