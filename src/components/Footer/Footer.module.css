@@ -1,89 +1,89 @@
 .registrationSection {
-	margin: 100px 40px;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+  margin: 100px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .registrationHeader {
-	width: 100%;
+  width: 100%;
 }
 
 .registrationHeader h1 {
-	font-family: Mark-Bold;
-	margin-bottom: 10px;
+  font-family: Mark-Bold;
+  margin-bottom: 10px;
 }
 
 .registrationHeader p {
-	font-size: 1.3rem;
-	color: #95989f;
+  font-size: 1.3rem;
+  color: #95989f;
 }
 
 .input label {
-	font-family: Mark-Bold;
+  font-family: Mark-Bold;
 }
 
 .input input {
-	border: 2px solid #bec1c7;
-	padding: 10px;
-	font-size: 1.2rem;
-	margin-right: 20px;
+  border: 2px solid #bec1c7;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-right: 20px;
 }
 
 .input input:focus,
 .registerButton {
-	outline: 0;
+  outline: 0;
 }
 
 .registerButton {
-	background: #ffffff;
-	border: 2px solid #006bc2;
-	color: #006bc2;
-	padding: 10px;
-	font-size: 1.2rem;
-	cursor: pointer;
+  background: #ffffff;
+  border: 2px solid #006bc2;
+  color: #006bc2;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .footerSection {
-	padding: 100px 40px;
-	background-color: #131429;
-	color: #ffffff;
-	position: relative;
+  padding: 100px 40px;
+  background-color: #131429;
+  color: #ffffff;
+  position: relative;
 }
 
 .popularLinks,
 .detailSection {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .popularLinks {
 	margin-bottom: 50px;
+	align-items: flex-start;
 }
 
 .detailSection div {
-	width: 100%;
-	text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .iconGroup {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .iconGroup i {
-	font-size: 1.5rem;
-	border: 1px solid #ffffff;
-	padding: 10px;
-	margin: 10px;
+  font-size: 1.5rem;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin: 10px;
 }
 
 .copyright {
-	position: absolute;
-	bottom: 30px;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
