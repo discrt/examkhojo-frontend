@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-
+import AuthModal from "../../components/AuthModal";
+import Footer from "../../components/Footer";
+import InfoGroup from "../../components/InfoGroup";
 import Navbar from "../../components/Navbar";
 import homeStyle from "./HomeScreen.module.css";
-import InfoGroup from "../../components/InfoGroup";
-import Footer from "../../components/Footer";
-import AuthModal from "../../components/AuthModal";
 
 const HomeScreen = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,7 +13,7 @@ const HomeScreen = () => {
     <>
       {showModal ? <AuthModal setShowModal={setShowModal} /> : null}
       <div className={homeStyle.landingPage}>
-        <div className={homeStyle.containerFluid} style={{height: "60vh"}}>
+        <div className={homeStyle.containerFluid} style={{ height: "60vh" }}>
           <Navbar setShowModal={setShowModal} />
           <div className={homeStyle.centralInput}>
             <h1 className={homeStyle.header}>Be the Best Version of You</h1>
@@ -45,10 +44,10 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
-      <div className={homeStyle.containerFluid}> 
-      <InfoGroup header="Top Featured Exams" search="Search Exams" />
-      <InfoGroup header="Top Featured Colleges" search="Search Colleges" />
-      <InfoGroup header="Top Featured Courses" search="Search Courses" />
+      <div className={homeStyle.containerFluid}>
+        <InfoGroup header="Top Featured Exams" search="Search Exams" />
+        <InfoGroup header="Top Featured Colleges" search="Search Colleges" />
+        <InfoGroup header="Top Featured Courses" search="Search Courses" />
       </div>
       <Footer />
     </>

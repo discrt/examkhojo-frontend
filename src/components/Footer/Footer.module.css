@@ -5,51 +5,6 @@
   margin: 0 auto;
 }
 
-.registrationSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.registrationHeader {
-  width: 100%;
-}
-
-.registrationHeader h1 {
-  font-family: Mark-Bold;
-  margin-bottom: 10px;
-}
-
-.registrationHeader p {
-  font-size: 1.3rem;
-  color: #95989f;
-}
-
-.input label {
-  font-family: Mark-Bold;
-}
-
-.input input {
-  border: 2px solid #bec1c7;
-  padding: 10px;
-  font-size: 1.2rem;
-  margin-right: 20px;
-}
-
-.input input:focus,
-.registerButton {
-  outline: 0;
-}
-
-.registerButton {
-  background: #ffffff;
-  border: 2px solid #006bc2;
-  color: #006bc2;
-  padding: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 .footerSection {
   padding: 80px 0 36px 0;
   background-color: #131429;

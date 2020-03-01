@@ -1,27 +1,11 @@
 import React from "react";
+import Subscribe from "../Subscribe";
 import footerStyle from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <div>
-      <div
-        className={`${footerStyle.registrationSection} ${footerStyle.containerFluid}`}
-        style={{ margin: "100px auto" }}
-      >
-        <div className={footerStyle.registrationHeader}>
-          <h1>Get Exclusive Updates</h1>
-          <p>Register now with Examkhojo.com</p>
-        </div>
-        <div className={footerStyle.input}>
-          <label>Full Name</label>
-          <input type="text" placeholder="Type your full name" />
-        </div>
-        <div className={footerStyle.input}>
-          <label>Your Email</label>
-          <input type="text" placeholder="Type your email" />
-        </div>
-        <button className={footerStyle.registerButton}>Subscribe</button>
-      </div>
+      <Subscribe />
       <div className={footerStyle.footerSection}>
         <div className={footerStyle.containerFluid}>
           <div className={footerStyle.popularLinks}>
