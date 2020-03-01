@@ -1,5 +1,11 @@
+.containerFluid {
+  position: relative;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .registrationSection {
-  margin: 100px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -45,7 +51,7 @@
 }
 
 .footerSection {
-  padding: 100px 40px;
+  padding: 80px 0 36px 0;
   background-color: #131429;
   color: #ffffff;
   position: relative;
@@ -59,8 +65,13 @@
 }
 
 .popularLinks {
-	margin-bottom: 50px;
-	align-items: flex-start;
+  margin-bottom: 50px;
+  align-items: flex-start;
+}
+
+.popularLinks h1,
+.popularLinks p {
+  margin-bottom: 16px;
 }
 
 .detailSection div {
@@ -78,12 +89,10 @@
   font-size: 1.5rem;
   border: 1px solid #ffffff;
   padding: 10px;
-  margin: 10px;
+  margin: 0 16px;
 }
 
 .copyright {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 50px;
 }
