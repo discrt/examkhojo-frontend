@@ -66,12 +66,24 @@ const Footer = () => {
           <div className={footerStyle.detailSection}>
             <img src="/images/logo-white.png" alt="Brand Logo" width={200} />
             <div className={footerStyle.iconGroup}>
-              <i className="fab fa-youtube"></i>
-              <i className="fab fa-facebook"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-snapchat-ghost"></i>
-              <i className="fab fa-twitter"></i>
-              <i className="fab fa-linkedin"></i>
+              <a href="https://www.youtube.com/channel/UC4Kc7m9reV-1qxAUFap8-Zw/">
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a href="https://www.facebook.com/examkhojo/">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/exam_khojo/">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://in.pinterest.com/examkhojo/">
+                <i class="fab fa-pinterest"></i>
+              </a>
+              <a href="https://twitter.com/examkhojo">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/examkhojo">
+                <i className="fab fa-linkedin"></i>
+              </a>
             </div>
           </div>
           <p className={footerStyle.copyright}>

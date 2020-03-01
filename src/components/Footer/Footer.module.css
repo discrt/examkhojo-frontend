@@ -85,6 +85,15 @@
   align-items: center;
 }
 
+.iconGroup a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconGroup a:focus {
+  outline: 0;
+}
+
 .iconGroup i {
   font-size: 1.5rem;
   border: 1px solid #ffffff;
