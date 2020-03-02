@@ -1,11 +1,10 @@
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import { withRouter } from "react-router-dom";
-
-import authModalStyle from "./AuthModal.module.css";
+import { loginUser, oauthGoogleLogin, registerUser } from "../../actions";
 import Modal from "../Modal";
-import { registerUser, loginUser, oauthGoogleLogin } from "../../actions";
+import authModalStyle from "./AuthModal.module.css";
 
 const renderInput = ({ field, ...props }) => {
   return (
@@ -73,7 +72,7 @@ const AuthModal = ({
             }}
           >
             {() => (
-              <Form className={authModalStyle.form}>
+              <Form className={authModalStyle.form} autoComplete="false">
                 <Field
                   type="text"
                   name="name"
@@ -81,7 +80,14 @@ const AuthModal = ({
                   placeholder="Type Your Name"
                   component={renderInput}
                 />
-                <ErrorMessage name="name" component="div" />
+                <ErrorMessage
+                  name="name"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
                   type="email"
                   name="email"
@@ -89,7 +95,14 @@ const AuthModal = ({
                   placeholder="Type Your Email"
                   component={renderInput}
                 />
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage
+                  name="email"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
                   type="password"
                   name="password"
@@ -97,7 +110,14 @@ const AuthModal = ({
                   placeholder="Type Your Password"
                   component={renderInput}
                 />
-                <ErrorMessage name="password" component="div" />
+                <ErrorMessage
+                  name="password"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <button
                   type="submit"
                   className={`${authModalStyle.signup} ${authModalStyle.btn}`}
@@ -156,7 +176,14 @@ const AuthModal = ({
                   placeholder="Type Your Email"
                   component={renderInput}
                 />
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage
+                  name="email"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
                   type="password"
                   name="password"
@@ -164,7 +191,6 @@ const AuthModal = ({
                   placeholder="Type Your Password"
                   component={renderInput}
                 />
-                <ErrorMessage name="password" component="div" />
                 <button
                   type="submit"
                   className={`${authModalStyle.signup} ${authModalStyle.btn}`}
