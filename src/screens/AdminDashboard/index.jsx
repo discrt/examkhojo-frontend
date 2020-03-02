@@ -52,7 +52,7 @@ const AdminDashboard = ({
         style={{
           marginTop: "20px",
           fontSize: "1.2rem",
-          fontFamily: "Mark-Bold"
+          fontFamily: "Public Sans Bold"
         }}
       >
         No Managers exist currently!

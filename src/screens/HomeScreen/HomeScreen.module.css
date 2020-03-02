@@ -21,7 +21,7 @@
 }
 
 .header {
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   color: #ffffff;
   text-align: center;
   margin-bottom: 30px;
@@ -74,7 +74,7 @@
 
 .showcaseHeader {
   font-size: 3rem;
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
 }
 
 .showcaseContent {
@@ -82,7 +82,7 @@
 }
 
 .showcaseContent h3 {
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
