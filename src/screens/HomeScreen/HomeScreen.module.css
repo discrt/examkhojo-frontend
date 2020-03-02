@@ -1,15 +1,15 @@
-.landingPage {
-  height: 60vh;
-  overflow: hidden;
-  background-image: url("/images/examkhojo-dark-bg.png");
-  background-size: cover;
-}
-
 .containerFluid {
   position: relative;
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.landingPage {
+  height: 60vh;
+  overflow: hidden;
+  background-image: url("/images/examkhojo-dark-bg.png");
+  background-size: cover;
 }
 
 .centralInput {

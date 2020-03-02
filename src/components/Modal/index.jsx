@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import modalStyle from "./Modal.module.css";
 
-const Modal = ({ children, background }) => {
+const Modal = ({ children, background, containerBackground }) => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -11,7 +11,7 @@ const Modal = ({ children, background }) => {
     };
   }, []);
   return ReactDOM.createPortal(
-    <div className={modalStyle.background}>
+    <div className={modalStyle.background} style={{background: containerBackground}}>
       <div className={modalStyle.container} style={{ background }}>
         {children}
       </div>
@@ -21,7 +21,8 @@ const Modal = ({ children, background }) => {
 };
 
 Modal.defaultProps = {
-  background: "#fff"
+  background: "#fff",
+  containerBackground: "rgba(0, 0, 0, 0.4)"
 };
 
 export default Modal;

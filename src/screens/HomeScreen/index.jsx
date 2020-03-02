@@ -3,15 +3,17 @@ import AuthModal from "../../components/AuthModal";
 import Footer from "../../components/Footer";
 import InfoGroup from "../../components/InfoGroup";
 import Navbar from "../../components/Navbar";
+import SearchModal from "../../components/SearchModal";
 import homeStyle from "./HomeScreen.module.css";
 
 const HomeScreen = () => {
-  const [searchTerm, setSearchTerm] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   return (
     <>
       {showModal ? <AuthModal setShowModal={setShowModal} /> : null}
+      {showSearch ? <SearchModal setShowSearch={setShowSearch} /> : null}
       <div className={homeStyle.landingPage}>
         <div className={homeStyle.containerFluid} style={{ height: "60vh" }}>
           <Navbar setShowModal={setShowModal} />
@@ -22,8 +24,7 @@ const HomeScreen = () => {
               <input
                 type="text"
                 placeholder="Search Exams, Colleges, Courses &amp; more"
-                onChange={event => setSearchTerm(event.target.value)}
-                value={searchTerm}
+                onClick={() => setShowSearch(true)}
               />
             </div>
           </div>

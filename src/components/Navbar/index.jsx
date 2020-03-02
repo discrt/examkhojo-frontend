@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-
+import { Link, withRouter } from "react-router-dom";
+import { getUser, logoutUser } from "../../actions";
 import Loader from "../Loader";
 import navbarStyle from "./Navbar.module.css";
-import { logoutUser, getUser } from "../../actions";
 
 const Navbar = ({ setShowModal, user, logoutUser, getUser, history }) => {
   const [showDropdown, setShowDropdown] = useState(false);
