@@ -5,6 +5,7 @@ import InfoGroup from "../../components/InfoGroup";
 import Navbar from "../../components/Navbar";
 import SearchModal from "../../components/SearchModal";
 import homeStyle from "./HomeScreen.module.css";
+import Button from "../../components/Button";
 
 const HomeScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -41,7 +42,7 @@ const HomeScreen = () => {
               We ease your biggest doubts with personalized Video Counselling
               from our Curated Experts and Answers from the student community
             </p>
-            <button>Get Counselling</button>
+            <Button title='Get Counselling' />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { getUser, logoutUser } from "../../actions";
+import Button from "../Button";
 import Loader from "../Loader";
 import navbarStyle from "./Navbar.module.css";
 
@@ -30,7 +31,7 @@ const Navbar = ({ setShowModal, user, logoutUser, getUser, history }) => {
         </Link>
         <Link to="/colleges">Colleges</Link>
         <Link to="/courses">Courses</Link>
-        <button>Get Counselling</button>
+        <a href="/">Get Counselling</a>
         {loading ? (
           <Loader height="0" color="#ffffff" />
         ) : user ? (
@@ -76,18 +77,16 @@ const Navbar = ({ setShowModal, user, logoutUser, getUser, history }) => {
           </div>
         ) : (
           <>
-            <button
-              className={navbarStyle.login}
+            <Button
+              title="Log In"
               onClick={() => setShowModal(true)}
-            >
-              Log In
-            </button>
-            <button
-              style={{ backgroundColor: "#006BC2" }}
+              outline
+              style={{ color: "#fff" }}
+            />
+            <Button
+              title="Sign Up for Free"
               onClick={() => setShowModal(true)}
-            >
-              Sign Up for Free
-            </button>
+            />
           </>
         )}
       </div>

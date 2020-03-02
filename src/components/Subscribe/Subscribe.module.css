@@ -46,12 +46,3 @@
 .registerButton {
   outline: 0;
 }
-
-.registerButton {
-  background: #ffffff;
-  border: 2px solid #006bc2;
-  color: #006bc2;
-  padding: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
