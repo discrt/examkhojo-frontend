@@ -1,5 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { loginUser, oauthGoogleLogin, registerUser } from "../../actions";
@@ -30,6 +30,37 @@ const AuthModal = ({
     }
     // eslint-disable-next-line
   }, [user]);
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const renderPasswordInput = ({ field, ...props }) => {
+    return (
+      <div className={authModalStyle.inputContainer}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+          className={authModalStyle.passwordContainer}
+        >
+          <input {...field} {...props} spellCheck="false" autoComplete="off" />
+          <img
+            src={
+              showPassword
+                ? "/images/Eye Invisible.svg"
+                : "/images/Eye Visibility.svg"
+            }
+            alt={showPassword ? "Hide Password" : "Show Password"}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              setShowPassword(!showPassword);
+            }}
+          />
+        </div>
+      </div>
+    );
+  };
 
   return (
     <Modal background="rgba(0,0,0,0)">
@@ -104,7 +135,7 @@ const AuthModal = ({
                   )}
                 />
                 <Field
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   label="Password"
                   placeholder="Type Your Password"
@@ -185,11 +216,11 @@ const AuthModal = ({
                   )}
                 />
                 <Field
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   label="Password"
                   placeholder="Type Your Password"
-                  component={renderInput}
+                  component={renderPasswordInput}
                 />
                 <button
                   type="submit"
@@ -226,11 +257,12 @@ const AuthModal = ({
               <p>Log In to access all your bookmarked items</p>
               <button
                 className={authModalStyle.btn}
-                onClick={e =>
+                onClick={e => {
                   e.target.parentElement.parentElement.parentElement.parentElement.classList.remove(
                     authModalStyle.rightPanelActive
-                  )
-                }
+                  );
+                  setShowPassword(false);
+                }}
               >
                 Log In
               </button>
@@ -242,11 +274,12 @@ const AuthModal = ({
               <p>Sign up to stay updated with the latest details</p>
               <button
                 className={authModalStyle.btn}
-                onClick={e =>
+                onClick={e => {
                   e.target.parentElement.parentElement.parentElement.parentElement.classList.add(
                     authModalStyle.rightPanelActive
-                  )
-                }
+                  );
+                  setShowPassword(false);
+                }}
               >
                 Sign Up for Free
               </button>

@@ -19,12 +19,12 @@ const HomeScreen = () => {
         <div className={homeStyle.containerFluid} style={{ height: "60vh" }}>
           <Navbar setShowModal={setShowModal} />
           <div className={homeStyle.centralInput}>
-            <h1 className={homeStyle.header}>Be the Best Version of You</h1>
+            <h1 className={homeStyle.header}>Find the best colleges, exams and courses in India</h1>
             <div className={homeStyle.inputBar}>
               <i className="fas fa-search"></i>
               <input
                 type="text"
-                placeholder="Search Exams, Colleges, Courses &amp; more"
+                placeholder="Search Exams, Colleges, Courses and more"
                 onClick={() => setShowSearch(true)}
               />
             </div>
@@ -39,8 +39,7 @@ const HomeScreen = () => {
           <div className={homeStyle.showcaseContent}>
             <h3>Get Expert Counselling</h3>
             <p>
-              We ease your biggest doubts with personalized Video Counselling
-              from our Curated Experts and Answers from the student community
+            We ease your biggest doubts with personalized counselling from our curated experts.
             </p>
             <Button title='Get Counselling' />
           </div>

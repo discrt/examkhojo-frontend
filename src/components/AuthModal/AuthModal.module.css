@@ -110,7 +110,8 @@
   width: 100%;
 }
 
-.form input {
+.inputContainer input,
+.inputContainer .passwordContainer {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
@@ -118,6 +119,14 @@
   border: 2px solid #babac2;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+.inputContainer .passwordContainer input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 0px;
 }
 
 .form input:focus {
