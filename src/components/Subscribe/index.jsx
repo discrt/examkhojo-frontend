@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 import subscribeStyle from "./Subscribe.module.css";
 
 const Subscribe = () => {
@@ -21,7 +22,7 @@ const Subscribe = () => {
             <label>Your Email</label>
             <input type="text" placeholder="Type your email" />
           </div>
-          <button className={subscribeStyle.registerButton}>Subscribe</button>
+          <Button title="Subscribe" outline />
         </form>
       </div>
     </>

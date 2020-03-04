@@ -27,24 +27,6 @@
   color: #ffffff;
 }
 
-.links button {
-  border: none;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-  background: none;
-}
-
-.links .login {
-  background: none;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-}
-
-.links button:focus {
-  outline: 0;
-}
-
 .profileDropdown {
   display: flex;
   justify-content: space-between;

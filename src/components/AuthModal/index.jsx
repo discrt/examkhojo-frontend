@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import { withRouter } from "react-router-dom";
-
-import authModalStyle from "./AuthModal.module.css";
+import { loginUser, oauthGoogleLogin, registerUser } from "../../actions";
 import Modal from "../Modal";
-import { registerUser, loginUser, oauthGoogleLogin } from "../../actions";
+import authModalStyle from "./AuthModal.module.css";
 
 const renderInput = ({ field, ...props }) => {
   return (
@@ -31,6 +30,37 @@ const AuthModal = ({
     }
     // eslint-disable-next-line
   }, [user]);
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const renderPasswordInput = ({ field, ...props }) => {
+    return (
+      <div className={authModalStyle.inputContainer}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+          className={authModalStyle.passwordContainer}
+        >
+          <input {...field} {...props} spellCheck="false" autoComplete="off" />
+          <img
+            src={
+              showPassword
+                ? "/images/Eye Invisible.svg"
+                : "/images/Eye Visibility.svg"
+            }
+            alt={showPassword ? "Hide Password" : "Show Password"}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              setShowPassword(!showPassword);
+            }}
+          />
+        </div>
+      </div>
+    );
+  };
 
   return (
     <Modal background="rgba(0,0,0,0)">
@@ -73,7 +103,7 @@ const AuthModal = ({
             }}
           >
             {() => (
-              <Form className={authModalStyle.form}>
+              <Form className={authModalStyle.form} autoComplete="false">
                 <Field
                   type="text"
                   name="name"
@@ -81,7 +111,14 @@ const AuthModal = ({
                   placeholder="Type Your Name"
                   component={renderInput}
                 />
-                <ErrorMessage name="name" component="div" />
+                <ErrorMessage
+                  name="name"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
                   type="email"
                   name="email"
@@ -89,15 +126,29 @@ const AuthModal = ({
                   placeholder="Type Your Email"
                   component={renderInput}
                 />
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage
+                  name="email"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   label="Password"
                   placeholder="Type Your Password"
-                  component={renderInput}
+                  component={renderPasswordInput}
                 />
-                <ErrorMessage name="password" component="div" />
+                <ErrorMessage
+                  name="password"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <button
                   type="submit"
                   className={`${authModalStyle.signup} ${authModalStyle.btn}`}
@@ -156,15 +207,21 @@ const AuthModal = ({
                   placeholder="Type Your Email"
                   component={renderInput}
                 />
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage
+                  name="email"
+                  render={msg => (
+                    <div style={{ fontSize: "0.8rem", color: "#C64545" }}>
+                      {msg}
+                    </div>
+                  )}
+                />
                 <Field
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   label="Password"
                   placeholder="Type Your Password"
-                  component={renderInput}
+                  component={renderPasswordInput}
                 />
-                <ErrorMessage name="password" component="div" />
                 <button
                   type="submit"
                   className={`${authModalStyle.signup} ${authModalStyle.btn}`}
@@ -200,11 +257,12 @@ const AuthModal = ({
               <p>Log In to access all your bookmarked items</p>
               <button
                 className={authModalStyle.btn}
-                onClick={e =>
+                onClick={e => {
                   e.target.parentElement.parentElement.parentElement.parentElement.classList.remove(
                     authModalStyle.rightPanelActive
-                  )
-                }
+                  );
+                  setShowPassword(false);
+                }}
               >
                 Log In
               </button>
@@ -216,11 +274,12 @@ const AuthModal = ({
               <p>Sign up to stay updated with the latest details</p>
               <button
                 className={authModalStyle.btn}
-                onClick={e =>
+                onClick={e => {
                   e.target.parentElement.parentElement.parentElement.parentElement.classList.add(
                     authModalStyle.rightPanelActive
-                  )
-                }
+                  );
+                  setShowPassword(false);
+                }}
               >
                 Sign Up for Free
               </button>

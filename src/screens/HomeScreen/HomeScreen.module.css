@@ -1,15 +1,15 @@
-.landingPage {
-  height: 60vh;
-  overflow: hidden;
-  background-image: url("/images/examkhojo-dark-bg.png");
-  background-size: cover;
-}
-
 .containerFluid {
   position: relative;
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.landingPage {
+  height: 72vh;
+  overflow: hidden;
+  background-image: url("/images/examkhojo-dark-bg.png");
+  background-size: cover;
 }
 
 .centralInput {
@@ -21,11 +21,12 @@
 }
 
 .header {
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
+  margin: 0 auto 30px;
+  font-size: 64px;
+  line-height: 68px;
 }
 
 .inputBar {
@@ -69,20 +70,20 @@
   justify-content: space-between;
   padding: 60px 0px;
   box-sizing: border-box;
-  height: 40vh;
+  height: 28vh;
 }
 
 .showcaseHeader {
   font-size: 3rem;
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
 }
 
 .showcaseContent {
-  width: 50%;
+  width: 40%;
 }
 
 .showcaseContent h3 {
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }

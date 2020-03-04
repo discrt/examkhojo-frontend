@@ -1,76 +1,82 @@
 .infoContainer {
-	margin: 100px 0;
+  margin: 80px auto;
 }
 
 .headerSection {
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	margin: 0 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 40px;
 }
 
 .headerSection h1 {
-	font-family: Mark-Bold;
-	margin-bottom: 10px;
+  font-family: Public Sans Bold;
+  margin-bottom: 10px;
 }
 
 .description {
-	color: #95989f;
-	font-size: 1.2rem;
+  color: #95989f;
+  font-size: 1.2rem;
 }
 
 .inputBar {
-	background: #ffffff;
-	padding: 10px 20px;
-	padding-right: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  background: #ffffff;
+  padding: 16px 32px;
+  border: 2px solid #babac2;
+  box-shadow: 0px 4px 16px rgba(13, 14, 21, 0.06);
+  border-radius: 5px;
+  width: 25%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .inputBar input {
-	background: none;
-	border: none;
-	width: 100%;
-	font-size: 1.2rem;
-	margin-left: 10px;
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-left: 10px;
 }
 
 .inputBar input:focus {
-	outline: 0;
+  outline: 0;
 }
 
 .inputBar i {
-	color: #95989f;
+  color: #95989f;
 }
 
 .cardGroup {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: calc(64px - 12px) -12px;
+  flex-wrap: wrap;
 }
 
 .card {
-	background: #ffffff;
-	padding: 20px;
-	width: 100%;
-	margin: 40px;
+  background: #ffffff;
+  padding: 20px;
+  width: calc(32.5% - 12px);
+  margin: 12px 12px;
 }
 
 .card h2 {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .card button {
-	background: none;
-	color: #006bc2;
-	text-decoration: underline;
-	border: none;
-	cursor: pointer;
-	margin-top: 20px;
-	font-size: 1.2rem;
+  background: none;
+  color: #006bc2;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 .card button:hover {
-	outline: 0;
+  outline: 0;
 }

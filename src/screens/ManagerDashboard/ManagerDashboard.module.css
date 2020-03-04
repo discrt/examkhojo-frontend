@@ -22,7 +22,7 @@
 
 .subheader {
   font-size: 1.2rem;
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   color: #006bc2;
 }
 
@@ -167,7 +167,7 @@
   padding: 10px;
   border: 2px solid #006bc2;
   color: #006bc2;
-  font-family: Mark-Bold;
+  font-family: Public Sans Bold;
   background: #fff;
   cursor: pointer;
 }

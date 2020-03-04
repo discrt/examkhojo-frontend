@@ -1,0 +1,74 @@
+.modalContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.containerFluid {
+  width: 60%;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+.containerFluid h1 {
+  color: #babac2;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.containerFluid li {
+  list-style: none;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #babac283;
+}
+
+.inputBar {
+  background: #ffffff;
+  padding: 16px 32px;
+  padding-right: 10px;
+  width: 60%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid #babac2;
+  position: relative;
+  margin-top: 100px;
+}
+
+.searchIcon {
+  color: #babac2;
+  font-size: 1.5rem;
+  padding: 20px 10px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.closeBtn{
+  position: absolute;
+  right: 0;
+  top: -50px;
+  font-size: 2rem;
+  color: #babac2;
+  cursor: pointer;
+}
+
+.inputBar input {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.inputBar input:focus {
+  outline: 0;
+}
+
+.inputBar input::placeholder {
+  color: #babac2;
+}
