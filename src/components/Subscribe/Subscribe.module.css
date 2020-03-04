@@ -37,9 +37,14 @@
 
 .input input {
   border: 2px solid #bec1c7;
-  padding: 10px;
   font-size: 1.2rem;
-  margin-right: 20px;
+  padding: 16px 32px;
+  margin: 8px 24px 0 0;
+  border-radius: 5px;
+}
+
+.input input::placeholder {
+  color: #babac2;
 }
 
 .input input:focus,

@@ -139,7 +139,7 @@ const AuthModal = ({
                   name="password"
                   label="Password"
                   placeholder="Type Your Password"
-                  component={renderInput}
+                  component={renderPasswordInput}
                 />
                 <ErrorMessage
                   name="password"
